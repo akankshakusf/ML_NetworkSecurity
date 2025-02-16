@@ -1,0 +1,6 @@
+# Load env variables from .env file for secure app configuration.
+python.dotenv
+pandas
+numpy
+matplotlib
+seaborn 
