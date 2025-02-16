@@ -3,6 +3,7 @@ pandas
 numpy
 matplotlib
 seaborn 
+pymongo[srv]==3.6
 pymongo
 certifi
 
