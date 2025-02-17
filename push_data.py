@@ -24,7 +24,7 @@ from networksecurity.logging.logger import logging
 class NetworkDataExtract():
     def __init__(self):
         try:
-            pass # Constructor that does nothing but could be a place for initialization code
+            pass # Constructor that does nothing but used for initialization code
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
@@ -52,12 +52,12 @@ class NetworkDataExtract():
             self.mongo_client=pymongo.MongoClient(MONGO_DB_URL)
             # Access the database from the client
             self.database = self.mongo_client[database]
-            # Access the collection from the database
+            # Access the collection(tbl) from the database
             self.collection = self.database[collection]
 
-            # Insert the records into the collection
+            # Insert the records into the collection(tbl)
             self.collection.insert_many(self.records)
-            # Return the number of records inserted
+            # to check return the number of records inserted
             return(len(self.records))
         
         except Exception as e:
@@ -69,7 +69,7 @@ if __name__=='__main__':
     FILE_PATH="Network_Data\phisingData.csv"
     DATABASE="NetworkDB"
     Collection="NetworkData"
-    # Create an instance 
+    # Create an instance of class above
     networkobj=NetworkDataExtract()
     # Convert CSV data to JSON format
     records=networkobj.csv_to_json_converter(file_path=FILE_PATH)
