@@ -8,7 +8,7 @@ from networksecurity.entity.artifact_entity import DataIngestionArtifact,DataVal
 from networksecurity.entity.config_entity import DataValidationConfig
 from networksecurity.constants.training_pipeline import SCHEMA_FILE_PATH
 from networksecurity.utils.main_utils.utils import read_yaml_file
-~
+
 
 #for logging and exception handling 
 from networksecurity.exception.exception import NetworkSecurityException
