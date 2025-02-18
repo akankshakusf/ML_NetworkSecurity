@@ -9,4 +9,5 @@ certifi
 scikit-learn
 dill
 pyaml
+scipy
 ##-e .
